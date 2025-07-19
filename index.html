@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Psicóloga - Laura Theiss</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
+    }
+
+    body {
+      background: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #6f42c1, #8e2de2);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    section h2 {
+      color: #6f42c1;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    .sobre-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    @media (min-width: 768px) {
+      .sobre-container {
+        flex-direction: row;
+        text-align: left;
+      }
+    }
+
+    .sobre-texto {
+      flex: 1;
+      font-size: 1.2rem;
+    }
+
+    /* Carrossel Ajustado */
+    .carousel {
+      position: relative;
+      width: 350px;       /* tamanho atual */
+      aspect-ratio: 3/4;  /* mantém proporção vertical */
+      overflow: hidden;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .carousel {
+        width: 100%;
+      }
+    }
+
+    .carousel-images {
+      display: flex;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-images img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;  /* mostra imagem inteira sem cortar */
+      background-color: #fff;
+      flex-shrink: 0;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #6f42c1;
+    }
+
+    /* Redes Sociais */
+    .social-links-wrapper {
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 16px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      color: #fff;
+      text-decoration: none;
+      transition: transform 0.15s;
+    }
+
+    .social-links a:hover {
+      transform: scale(1.05);
+    }
+
+    .social-instagram { background:#E4405F; }
+    .social-facebook  { background:#1877F2; }
+    .social-linkedin  { background:#0A66C2; }
+    .social-email     { background:#6f42c1; }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #eee;
+      font-size: 0.9rem;
+    }
+
+    /* Botão WhatsApp */
+    .whatsapp-button {
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      background-color: #25D366;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s;
+      z-index: 999;
+    }
+
+    .whatsapp-button:hover {
+      transform: scale(1.05);
+    }
+
+    .whatsapp-button img {
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Psicóloga Laura Theiss</h1>
+    <p>Atendimento Online e Presencial</p>
+    <p>Para crianças, adolescentes e adultos, e na abordagem cognitivo-comportamental.</p>
+  </header>
+
+  <section>
+    <h2>Sobre Mim</h2>
+    <div class="sobre-container">
+      <!-- Carrossel -->
+      <div class="carousel">
+        <div class="carousel-images">
+          <img src="imagem2.jpg" alt="Foto 2">
+          <img src="imagem3.jpg" alt="Foto 3">
+          <img src="imagem4.jpg" alt="Foto 4">
+          <img src="imagem5.jpg" alt="Foto 5">
+          <img src="imagem6.jpg" alt="Foto 6">
+        </div>
+      </div>
+      <!-- Texto -->
+      <div class="sobre-texto">
+        Psicóloga com atuação em Terapia Cognitivo-Comportamental (TCC), voltada ao atendimento de crianças, adolescentes e adultos. Trabalho com foco na identificação e reestruturação de pensamentos e comportamentos disfuncionais, promovendo saúde emocional e desenvolvimento pessoal.
+        <p>Sou formada em psicologia pela UNISAL, e durante minha travessia na faculdade vivenciei experiências que me agregam absolutamente enquanto profissional.</p>
+
+        <p>• Realizei estágios na área da educação</p>
+        <p>• Participei de um projeto para a confecção de brinquedos infantis para atendimentos</p>
+        <p>• Fiz parte de uma empresa júnior de psicologia</p>
+        <p>• Palestrei na área da psicologia organizacional</p>
+        <br>
+        <p>Por mais clichê que possa soar, digo que a psicologia sempre foi minha primeira e única profissão dos sonhos, e hoje poder dizer que estou fazendo o que amo é uma enorme satisfação.</p>
+        <br>
+        <p>Confie a mim a sua jornada e serei apoio no que te for necessário!</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Serviços</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Terapia Individual</h3>
+        <p>Atendimento personalizado com base na Terapia Cognitivo-Comportamental (TCC), voltado para crianças, adolescentes e adultos.
+Trabalhamos juntos para identificar e ressignificar padrões de pensamento e comportamento, promovendo bem-estar emocional e qualidade de vida.</p>
+      </div>
+      <div class="card">
+        <h3>Orientação Profissional</h3>
+        <p>Acompanhamento para adolescentes e adultos em fase de escolha ou transição de carreira, com base em autoconhecimento.
+Apoio para lidar com inseguranças, indecisões e expectativas, construindo um caminho alinhado aos seus valores e habilidades.</p>
+      </div>
+      <div class="card">
+        <h3>Atendimento Online</h3>
+        <p>Sessões online com a mesma qualidade do atendimento presencial, garantindo flexibilidade e conforto para cuidar da sua saúde mental.
+Ideal para quem busca acolhimento e suporte terapêutico em qualquer fase da vida, sem sair de casa.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Redes Sociais -->
+  <section aria-labelledby="redes-sociais-titulo">
+    <h2 id="redes-sociais-titulo">Redes Sociais</h2>
+    <div class="social-links-wrapper">
+      <div class="social-links">
+        <a class="social-instagram" href="https://www.instagram.com/psi.lauratheiss/" target="_blank" rel="noopener">Instagram</a>
+        <a class="social-email" href="mailto:Psilauratheiss@gmail.com" target="_blank" rel="noopener">E-mail</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Psicóloga Laura Theiss - Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- Botão WhatsApp -->
+  <a class="whatsapp-button" href="https://wa.me/5512981727872" target="_blank" aria-label="Fale pelo WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    Entre em Contato
+  </a>
+
+  <!-- Script Carrossel Automático -->
+  <script>
+    const images = document.querySelector('.carousel-images');
+    const totalImages = document.querySelectorAll('.carousel-images img').length;
+    let index = 0;
+
+    function showNextImage() {
+      const carouselWidth = document.querySelector('.carousel').offsetWidth;
+      index = (index + 1) % totalImages;
+      images.style.transform = `translateX(${-index * carouselWidth}px)`;
+    }
+
+    setInterval(showNextImage, 3000);
+
+    window.addEventListener('resize', () => {
+      const carouselWidth = document.querySelector('.carousel').offsetWidth;
+      images.style.transform = `translateX(${-index * carouselWidth}px)`;
+    });
+  </script>
+</body>
+</html>
